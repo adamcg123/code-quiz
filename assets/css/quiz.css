@@ -1,5 +1,5 @@
 body {
-    
+    color: white;
 }
 
 .choice-container {
@@ -30,11 +30,11 @@ body {
 }
 
 .correct {
-    background: linear-gradient(32deg, rgba(11, 223, 36,) 0%, rgba(41, 232, 111) 100%);
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgba(41, 232, 111) 100%);
 }
 
 .incorrect {
-    background: linear-gradient(32deg, rgba(230, 29, 29,) 0%, rgba(224, 11, 11) 100%);
+    background: linear-gradient(32deg, rgba(230, 29, 29) 0%, rgba(224, 11, 11) 100%);
 }
 
 
