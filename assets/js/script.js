@@ -3,6 +3,8 @@ const choices = Array.from(document.querySelectorAll(".choice-text"));
 const progressText = document.querySelector("#progressText");
 const scoreText = document.querySelector("#score");
 const progressBarFull = document.querySelector("#progressBarFull");
+var c = 100;
+
 
 
 let currentQuestion = {}
@@ -10,6 +12,7 @@ let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let avaibleQuestions = []
+
 
 
 let questions = [
@@ -70,14 +73,6 @@ let questions = [
         answer: 2,
     },
     {
-        question: "When Michael Jordan played for the Chicago Bulls, how many NBA Championships did he win?",
-        choice1: "2",
-        choice2: "8",
-        choice3: "5",
-        choice4: "6",
-        answer: 4,
-    },
-    {
         question: "What is the smallest unit of memory?",
         choice1: "Byte",
         choice2: "kilobyte",
@@ -103,6 +98,20 @@ let questions = [
     }
 ]
 
+function timer001() {
+    c = c - 1;
+    if (c < 100) {
+        time001.innerHTML = c;
+    }
+
+    if (c < 1) {
+        localStorage.setItem("mostRecentScore", score);
+        return window.location.assign("./end.html") 
+    }
+}
+
+upadte = setInterval("timer001()", 1000);
+
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 10
 
@@ -111,6 +120,7 @@ startGame = () => {
     score = 0
     avaibleQuestions = [...questions]
     getNewQuestion()
+    
 }
 
 getNewQuestion = () => {
@@ -152,6 +162,10 @@ choices.forEach(choice => {
             incrementScore(SCORE_POINTS)
         }
 
+        if (classToApply === 'incorrect') {
+            c = c - 10;
+        }
+
 
         selectedChoice.parentElement.classList.add(classToApply)
 
@@ -163,9 +177,40 @@ choices.forEach(choice => {
     })
 })
 
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
 incrementScore = num => {
     score +=num
     scoreText.innerText = score
 }
+
+
 
 startGame()
