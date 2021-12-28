@@ -1,8 +1,8 @@
-var question = document.querySelector("#question");
-var choices = Array.from(document.querySelectorAll(".choice-text"));
-var progressText = document.querySelector("#progressText");
-var scoreText = document.querySelector("#score");
-var progressBarFull = document.querySelector("#progressBarFull");
+const question = document.querySelector("#question");
+const choices = Array.from(document.querySelectorAll(".choice-text"));
+const progressText = document.querySelector("#progressText");
+const scoreText = document.querySelector("#score");
+const progressBarFull = document.querySelector("#progressBarFull");
 
 
 let currentQuestion = {}
@@ -116,7 +116,7 @@ startGame = () => {
 getNewQuestion = () => {
     if(avaibleQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score)
-        return window.location.assign("/end.html")  
+        return window.location.assign("./end.html")  
     }
 
     questionCounter++
@@ -159,7 +159,7 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
-        }, 1000)
+        }, 750)
     })
 })
 

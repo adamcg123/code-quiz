@@ -113,6 +113,7 @@ input::placeholder {
     margin-bottom: 3rem;
     width: 100%;
     outline: none;
+    color: white;
 }
 
 #end-text {
