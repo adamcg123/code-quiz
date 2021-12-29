@@ -3,9 +3,8 @@ const choices = Array.from(document.querySelectorAll(".choice-text"));
 const progressText = document.querySelector("#progressText");
 const scoreText = document.querySelector("#score");
 const progressBarFull = document.querySelector("#progressBarFull");
+
 var c = 100;
-
-
 
 let currentQuestion = {}
 let acceptingAnswers = true
@@ -98,6 +97,8 @@ let questions = [
     }
 ]
 
+
+
 function timer001() {
     c = c - 1;
     if (c < 100) {
@@ -112,6 +113,7 @@ function timer001() {
 
 upadte = setInterval("timer001()", 1000);
 
+
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 10
 
@@ -119,18 +121,18 @@ startGame = () => {
     questionCounter = 0
     score = 0
     avaibleQuestions = [...questions]
-    getNewQuestion()
-    
+    getNewQuestion()   
 }
+
 
 getNewQuestion = () => {
     if(avaibleQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem("mostRecentScore", score)
+        localStorage.setItem('mostRecentScore', score)
         return window.location.assign("./end.html")  
     }
 
     questionCounter++
-    progressText.innerText = `question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
     const questionIndex = Math.floor(Math.random() * avaibleQuestions.length)
@@ -146,6 +148,7 @@ getNewQuestion = () => {
 
     acceptingAnswers = true
 }
+
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
@@ -178,39 +181,10 @@ choices.forEach(choice => {
 })
 
 
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-
 incrementScore = num => {
     score +=num
     scoreText.innerText = score
 }
-
 
 
 startGame()
