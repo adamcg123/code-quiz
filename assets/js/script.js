@@ -4,7 +4,7 @@ const progressText = document.querySelector("#progressText");
 const scoreText = document.querySelector("#score");
 const progressBarFull = document.querySelector("#progressBarFull");
 
-var c = 100;
+var c = 120;
 
 let currentQuestion = {}
 let acceptingAnswers = true
@@ -101,7 +101,7 @@ let questions = [
 
 function timer001() {
     c = c - 1;
-    if (c < 100) {
+    if (c < 120) {
         time001.innerHTML = c;
     }
 
