@@ -21,4 +21,4 @@ When you first click the deployed link you will be brought to the landing page a
 and you will be able to click on what you want to do.
 
 ## Here Is A Little Demo
-![video](./images/demo.mp4)
+![image](./images/demo.mp4)
