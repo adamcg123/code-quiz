@@ -133,8 +133,7 @@ getNewQuestion = () => {
 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
-   
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
     const questionIndex = Math.floor(Math.random() * avaibleQuestions.length)
     currentQuestion = avaibleQuestions[questionIndex]
@@ -188,3 +187,16 @@ incrementScore = num => {
 }
 
 startGame()
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+
