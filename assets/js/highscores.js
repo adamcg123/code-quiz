@@ -11,7 +11,7 @@ highScores.map(score => {
 
 clear.addEventListener("click", function(event) {
     localStorage.clear()
-    return window.location.assign("../index.html") 
+    return window.location.assign("./index.html") 
 })
 
 
