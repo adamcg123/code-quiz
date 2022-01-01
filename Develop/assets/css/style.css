@@ -1,7 +1,9 @@
 :root {
     background-color: white;
 }
-
+body {
+    color:black
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -114,6 +116,7 @@ input::placeholder {
     width: 100%;
     outline: none;
     color: white;
+    color: black;
 }
 
 #end-text {
@@ -206,3 +209,4 @@ input::placeholder {
     background: linear-gradient(to bottom right, blue, purple);
     color: white;
   }
+
