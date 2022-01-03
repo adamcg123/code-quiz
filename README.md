@@ -17,8 +17,8 @@ Localstorage, html, css and javascript
 
 # On Startup
 When you first click the deployed link you will be brought to the landing page and that looks like the image below.
-![image](./images/p1.png)
+![image](./assets/images/p1.png)
 and you will be able to click on what you want to do.
 
 ## Here Is A Little Demo
-![image](./images/demo.gif)
+![image](./assets/images/demo.gif)
