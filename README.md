@@ -1,7 +1,7 @@
 # code quiz
 
 ## Deployed Link To The Quiz
-
+https://adamcg123.github.io/code-quiz/
 
 ## What Is It
 It is a timed quiz that is about anything and the quiz has a total of 120 seconds and 
