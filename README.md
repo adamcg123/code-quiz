@@ -1,7 +1,7 @@
 # code quiz
 
 ## Deployed Link To The Quiz
-https://adamcg123.github.io/code-quiz/
+
 
 ## What Is It
 It is a timed quiz that is about anything and the quiz has a total of 120 seconds and 
@@ -17,8 +17,8 @@ Localstorage, html, css and javascript
 
 # On Startup
 When you first click the deployed link you will be brought to the landing page and that looks like the image below.
-![image](./assets/images/p1.png)
+![image](./images/p1.png)
 and you will be able to click on what you want to do.
 
 ## Here Is A Little Demo
-![image](./assets/images/demo.gif)
+![image](./images/demo.gif)

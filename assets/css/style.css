@@ -97,7 +97,7 @@ h2 {
     align-items: center;
     max-width: 30rem;
 }
-/* start of end.html styling */
+
 input {
     margin-bottom: 1rem;
     width: 20rem;
@@ -129,10 +129,15 @@ input::placeholder {
 #saveScoreBtn {
     border: none;
 }
-/* end of end.html styling */
+
+.fa-home {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: white;
+}
 
 
-/* start of rules modal for index.html */
+/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -204,9 +209,10 @@ input::placeholder {
     background: linear-gradient(to bottom right, blue, purple);
     color: white;
   }
-/* end of rules modal styling */
+  body {
+    color: black;
+}
 
-/* start question answer choice styling */
 .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
@@ -241,7 +247,6 @@ input::placeholder {
 .incorrect {
     background: linear-gradient(32deg, rgba(230, 29, 29) 0%, rgba(224, 11, 11) 100%);
 }
-/* end of question choice styling */
 
 
 
@@ -262,12 +267,30 @@ input::placeholder {
  
 }
 
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgba(11, 223, 36,);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: rgba(11, 223, 36,);
+    width: 0%;
+}
+
 
 @media screen and (max-width: 768px) {
     .choice-container {
         min-width: 40rem;
     }
-/* end of hud styling */
+}
+body {
+    color: black;
+}
 
 #highScoresList {
     list-style: none;
