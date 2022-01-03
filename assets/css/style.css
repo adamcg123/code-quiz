@@ -129,15 +129,9 @@ input::placeholder {
 #saveScoreBtn {
     border: none;
 }
+/* end of end page css */
 
-.fa-home {
-    margin-left: 1rem;
-    font-size: 2rem;
-    color: white;
-}
-
-
-/* The Modal (background) */
+/* rules modal */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -209,10 +203,10 @@ input::placeholder {
     background: linear-gradient(to bottom right, blue, purple);
     color: white;
   }
-  body {
-    color: black;
-}
 
+/* end of modal css */
+
+/* answer choice boxes */
 .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
@@ -247,7 +241,7 @@ input::placeholder {
 .incorrect {
     background: linear-gradient(32deg, rgba(230, 29, 29) 0%, rgba(224, 11, 11) 100%);
 }
-
+/* endo fo answer choices css */
 
 
 /* Heads up display */
@@ -288,10 +282,9 @@ input::placeholder {
         min-width: 40rem;
     }
 }
-body {
-    color: black;
-}
+/* end of hud css */
 
+/* high scores css */
 #highScoresList {
     list-style: none;
     margin-bottom: 4rem;
@@ -301,3 +294,4 @@ body {
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
 }
+/* end of high scores css */
